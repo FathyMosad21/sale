@@ -1,15 +1,8 @@
-buyButtons.forEach(button => {
-    button.addEventListener('click', addToCart);
-});
-
-function addToCart() {
-    // تنفيذ الإجراءات التي تود تنفيذها عند النقر على زر "أضف إلى السلة"
-    alert('تمت إضافة المنتج إلى السلة!');
-}
-
-const buyButtons = document.querySelectorAll('.buy-btn');
-buyButtons.forEach(button => {
+document.querySelectorAll('.buy-btn').forEach(button => {
     button.addEventListener('click', () => {
-        alert('شكرًا لشرائك المنتج!');
+        button.innerHTML = "تمت الإضافة ✓";
+        setTimeout(() => {
+            button.innerHTML = "اشتري الآن";
+        }, 2000);
     });
 });
